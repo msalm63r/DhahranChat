@@ -1,0 +1,581 @@
+/* stylechat.css */
+
+/* الأنماط العامة */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    direction: rtl;
+}
+
+.chat-header {
+    background-color: #075e54;
+    padding: 7px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-header h1 {
+    margin: 0;
+    font-size: 25px;
+   display: flex;
+}
+
+.chat-container {
+    padding: 20px;
+    height: 400px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+    overflow-y: scroll;
+    background-color: #fff;
+}
+
+.chat-input {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #7d7d7d;
+    margin-top: -11px;
+}
+
+.chat-input input[type="text"] {
+    width: 85%;
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+    background-color: #d2d2d2;
+}
+
+.chat-input .btn-send {
+    background-color: #128c7e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.fa-ellipsis-v{
+    color: #fff;
+    margin-right: 20px;
+}
+
+
+.chat-input .btn-send:hover {
+    background-color: #0a664b;
+}
+
+/* تحسين مظهر الرسائل */
+.message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    word-wrap: break-word; /* التعامل مع النص طويل الأبعاد */
+    width: 95%;
+}
+
+/* مظهر اسم المرسل */
+.message-sender {
+    color: #989898;
+    font-size: 14px;
+    margin-bottom: 15px; /* إضافة مسافة بين اسم المرسل ومحتوى الرسالة */
+}
+
+/* مظهر محتوى الرسالة */
+.message-content {
+    margin-bottom: 15px; /* إضافة مسافة بين محتوى الرسالة ووقت الرسالة */
+}
+
+/* مظهر وقت الرسالة */
+.message-time {
+    color: #999;
+    font-size: 12px;
+}
+
+/* تحسين مظهر الرسائل المرسلة من المستخدم */
+.message.sent {
+    width: 30%;
+    background-color: #194540;
+    color: white;
+    align-self: flex-end; /* لتحقيق محاذاة النصوص إلى اليمين */
+}
+
+/* تحسين مظهر الرسائل المستلمة */
+.message.received {
+    background-color: #128c7e;
+    color: white;
+    align-self: flex-start; /* لتحقيق محاذاة النصوص إلى اليسار */
+}
+
+
+.sender-message {
+    background-color: #c3e6cb; /* تطبيق لون خلفية مختلف لرسائل المرسل */
+}
+
+
+
+
+
+.logout-button {
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    background-color: #c41700;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.logout-button:hover {
+    background-color: #740e00;
+}
+
+.logo {
+    width: 30px; /* تحديد العرض */
+    height: 30px; /* الحفاظ على نسب العرض إلى الارتفاع */
+    position: absolute;
+    right: 50px;
+}
+
+
+
+
+
+
+
+
+@media (1000px <= width <= 1240px){
+    .chat-header {
+        background-color: #075e54;
+        padding: 7px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header h1 {
+        margin: 0;
+        font-size: 25px;
+        display: flex;
+    }
+    
+    .chat-container {
+        padding: 20px;
+        height: 400px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+        overflow-y: scroll;
+        background-color: #fff;
+    }
+    
+    .chat-input {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #7d7d7d;
+        margin-top: -11px;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 85%;
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #d2d2d2;
+    }
+    
+    .chat-input .btn-send {
+        background-color: #128c7e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    
+    .fa-ellipsis-v{
+        color: #fff;
+        margin-right: 20px;
+    }
+    
+    
+    .chat-input .btn-send:hover {
+        background-color: #0a664b;
+    }
+    
+    /* تحسين مظهر الرسائل */
+    .message {
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        word-wrap: break-word; /* التعامل مع النص طويل الأبعاد */
+        width: 60%;
+    }
+    
+    /* مظهر اسم المرسل */
+    .message-sender {
+        color: #989898;
+        font-size: 14px;
+        margin-bottom: 15px; /* إضافة مسافة بين اسم المرسل ومحتوى الرسالة */
+    }
+    
+    /* مظهر محتوى الرسالة */
+    .message-content {
+        margin-bottom: 15px; /* إضافة مسافة بين محتوى الرسالة ووقت الرسالة */
+    }
+    
+    /* مظهر وقت الرسالة */
+    .message-time {
+        color: #999;
+        font-size: 12px;
+    }
+    
+    /* تحسين مظهر الرسائل المرسلة من المستخدم */
+    .message.sent {
+        width: 30%;
+        background-color: #194540;
+        color: white;
+        align-self: flex-end; /* لتحقيق محاذاة النصوص إلى اليمين */
+    }
+    
+    /* تحسين مظهر الرسائل المستلمة */
+    .message.received {
+        background-color: #128c7e;
+        color: white;
+        align-self: flex-start; /* لتحقيق محاذاة النصوص إلى اليسار */
+    }
+    
+    
+    .sender-message {
+        background-color: #c3e6cb; /* تطبيق لون خلفية مختلف لرسائل المرسل */
+    }
+    
+    
+    .logout-button {
+        position: absolute;
+        top: 6px;
+        left: 30px;
+        background-color: #c41700;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    
+    .logout-button:hover {
+        background-color: #740e00;
+    }
+    
+    .logo {
+        width: 30px; /* تحديد العرض */
+        height: 30px; /* الحفاظ على نسب العرض إلى الارتفاع */
+        position: absolute;
+        right: 50px;
+    }
+}
+
+
+
+
+@media (800px <= width <= 990px){
+    .chat-header {
+        background-color: #075e54;
+        padding: 7px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header h1 {
+        margin: 0;
+        font-size: 25px;
+        display: flex;
+    }
+    .chat-input {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #7d7d7d;
+        margin-top: -11px;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 80%;
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #d2d2d2;
+    }
+    
+    .chat-input .btn-send {
+        background-color: #128c7e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    
+    .fa-ellipsis-v{
+        color: #fff;
+        margin-right: 20px;
+    }
+    
+    
+    .chat-input .btn-send:hover {
+        background-color: #0a664b;
+    }
+}
+
+
+
+@media (600px <= width <= 800px){
+    .chat-header {
+        background-color: #075e54;
+        padding: 7px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header h1 {
+        margin: 0;
+        font-size: 25px;
+        display: flex;
+    }
+    .chat-input {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #7d7d7d;
+        margin-top: 1px;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 75%;
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #d2d2d2;
+    }
+    
+    .chat-input .btn-send {
+        background-color: #128c7e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    
+    .fa-ellipsis-v{
+        color: #fff;
+        margin-right: 20px;
+    }
+    
+    
+    .chat-input .btn-send:hover {
+        background-color: #0a664b;
+    }
+}
+
+
+
+
+@media (400px <= width <= 610px){
+    .chat-header {
+        background-color: #075e54;
+        padding: 7px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header h1 {
+        margin: 0;
+        font-size: 25px;
+        display: flex;
+    }
+    .chat-input {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #7d7d7d;
+        margin-top: 1px;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 60%;
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #d2d2d2;
+    }
+    
+    .chat-input .btn-send {
+        background-color: #128c7e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    
+    .fa-ellipsis-v{
+        color: #fff;
+        margin-right: 20px;
+    }
+    
+    
+    .chat-input .btn-send:hover {
+        background-color: #0a664b;
+    }
+
+    .logout-button {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        background-color: #c41700;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    .chat-header h1 {
+        margin: 0;
+        font-size: 20px;
+        display: flex;
+    }
+}
+
+
+@media (250px <= width <= 403px){
+    .chat-header {
+        background-color: #075e54;
+        padding: 7px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .chat-header h1 {
+        margin: 0;
+        font-size: 25px;
+        display: flex;
+    }
+    .chat-input {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #7d7d7d;
+        margin-top: 1px;
+    }
+    
+    .chat-input input[type="text"] {
+        width: 50%;
+        flex-grow: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin-right: 10px;
+        background-color: #d2d2d2;
+    }
+    
+    .chat-input .btn-send {
+        background-color: #128c7e;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 8px;
+        margin-right: 20px;
+    }
+    
+    .fa-ellipsis-v{
+        color: #fff;
+        margin-right: 20px;
+    }
+    
+    
+    .chat-input .btn-send:hover {
+        background-color: #0a664b;
+    }
+
+    .logout-button {
+        position: absolute;
+        top: 8px;
+        left: 20px;
+        background-color: #c41700;
+        border: none;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 10px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    .chat-header h1 {
+        margin: 0;
+        font-size: 20px;
+        display: flex;
+    }
+}
